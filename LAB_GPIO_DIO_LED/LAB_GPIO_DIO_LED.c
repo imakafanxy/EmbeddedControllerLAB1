@@ -9,7 +9,7 @@
 */
 #include "stdio.h"
 #include "stm32f4xx.h"
-#include "ecRCC2_.h"
+#include "ecRCC2.h"
 #include "ecGPIO2.h"
 
 PinName_t LED_pin = PA_5;
