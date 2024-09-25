@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\LAB_GPIO_7segment.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\LAB_GPIO_7segment.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Tue Sep 24 18:08:22 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Wed Sep 25 10:33:06 2024
 <BR><P>
 <H3>Maximum Stack Usage =        148 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -645,11 +645,11 @@ Global Symbols
 <LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_read
 </UL>
 
-<P><STRONG><a name="[50]"></a>main</STRONG> (Thumb, 124 bytes, Stack size 24 bytes, lab_gpio_7segment.o(.text.main))
+<P><STRONG><a name="[50]"></a>main</STRONG> (Thumb, 114 bytes, Stack size 24 bytes, lab_gpio_7segment.o(.text.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 148<LI>Call Chain = main &rArr; setup &rArr; sevensegment_display_init &rArr; GPIO_init &rArr; GPIO_mode &rArr; ecPinmap
 </UL>
-<BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sevensegment_display
-<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_read
+<BR>[Calls]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_read
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sevensegment_display
 <LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setup
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main

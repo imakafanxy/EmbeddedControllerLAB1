@@ -4,7 +4,7 @@
 
 #define BUTTON_PIN PC_13
 
-const PinName_t OUTPUT_PINS[4] = {PA_7, PB_6, PC_7, PA_9};
+const PinName_t OUTPUT_PINS[4] = {PA_5, PA_6, PA_7, PA_9};
 
 void setup(void);
 
@@ -16,16 +16,10 @@ int main(void) {
 	
 	// Inifinite Loop ----------------------------------------------------------
 	while(1){
-		if(GPIO_read(BUTTON_PIN) == 0) {	
-			if (cnt > 9) cnt = 0;
-			
-			sevensegment_display(cnt % 10);
-			cnt++; 
-
-			for (int i = 0; i < 50000; i++) {}  
-
-			while(GPIO_read(BUTTON_PIN) == 0);
-		}
+		sevensegment_display(cnt % 10);
+		if(GPIO_read(BUTTON_PIN) == 0) cnt++; 
+        if (cnt > 9) cnt = 0;
+		for(int i = 0; i < 100000;i++){}  // delay_ms(500);
 	}
 }
 // Initialiization 
