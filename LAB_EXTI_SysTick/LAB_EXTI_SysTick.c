@@ -38,17 +38,17 @@ void setup(void)
 	
 int main(void) { 
 	setup();
-		
+
 	while(1){
-		sevensegment_display(cnt % 10); 
+	sevensegment_display(cnt % 10);
 	}
 }
 
 // EXTI interrupt handler for button press
 void EXTI15_10_IRQHandler(void) {
 	if(is_pending_EXTI(BUTTON_PIN)) {  // Check if EXTI is pending
-		cnt++;  // Increment counter
-		if (cnt > 9) cnt = 0;
+		cnt = 0;
+		sevensegment_display(cnt);
 		clear_pending_EXTI(BUTTON_PIN);  // Clear EXTI pending flag
 	}
 }
